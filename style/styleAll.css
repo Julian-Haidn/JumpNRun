@@ -1,0 +1,19 @@
+:root{
+	--cloudwidth:;
+}
+@font-face { 
+	font-family: 'Overload';
+    /*src: url('../font/overload.ttf') format('truetype');*/
+}
+*{
+	margin:0px;
+	padding:0px;
+	font-family: 'Overload';
+}
+html{
+	overflow: hidden;
+}
+body{
+	height: 100vh;
+	width: 100vw;
+}

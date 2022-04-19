@@ -1,0 +1,73 @@
+/* --- Background --- */
+.background{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	
+	background-image: url("../image/bg/sky.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 1;
+}
+.background div{
+	position: absolute;
+	
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	
+	z-index: 2;
+}
+.hills{
+	bottom: 0px;
+	left: var(--hillsLeft);
+	width: 300%;
+	min-width: calc(43vh*4.153*3);
+	height: 43%;
+	background-image: url("../image/bg/hills.gif");
+}
+.mountains{
+	bottom: 0px;
+	left: var(--mountainsLeft);
+	width: 300%;
+	min-width: calc(70vh*2.537*3);
+	height: 70%;
+	background-image: url("../image/bg/mountains.gif");
+}
+.hills, .mountains{
+	/*
+	transition-timing-function: linear;
+	transition-duration: 0.1s;
+	*/
+}
+
+/*Wolken*/
+.clouds{
+	top: 0px;
+	left: -100%;
+	width: 300%;
+	min-width: calc(38vh*4.677*3);
+	height: 38%;
+}
+#clouds1{
+	background-image: url("../image/bg/clouds1.svg");
+	animation: cloudAmimation 26s linear infinite;
+}
+#clouds2{
+	background-image: url("../image/bg/clouds2.svg");
+	animation: cloudAmimation 18s linear infinite;
+}
+#clouds3{
+	background-image: url("../image/bg/clouds3.svg");
+	animation: cloudAmimation 24s linear infinite;
+}
+@keyframes cloudAmimation{
+	from{
+		left: 0;
+	}
+	to{
+		left: var(--resetClouds);
+	}
+}
